@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kicksforall.pe</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .logo {
+            width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+            height: auto;
+            margin-top: 10px; /* Alineación vertical del logo */
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sección de productos */
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-card {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Formulario de autenticación */
+        .auth-form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .auth-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .auth-form input[type="text"],
+        .auth-form input[type="email"],
+        .auth-form input[type="password"],
+        .auth-form button {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .auth-form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .auth-form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <img src="https://t3.ftcdn.net/jpg/04/42/92/26/360_F_442922621_NbpJkMYaPF8XoNWD9L6UGvG1o7Gc6NeR.jpg" alt="Logo Kicksforall" class="logo">
+        <h1>Kicksforall.pe</h1>
+    </header>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Sección de productos -->
+        <section id="calzados" class="product-section">
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQauKpYN16RlmBIfZElW3qBNdrVYkjg6Z_sUE9Fhm-g4Q-H6Rx0wtsjCMWlbSQVFurb_1c&usqp=CAU" alt="Calzado 1">
+                <h3>Calzado 1</h3>
+                <p>Precio: 750.00 S/</p>
+                <p>Talla: 36-42.5</p>
+                <button onclick="comprar('Calzado 1')">Comprar</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwEQjh48bL74aOQnjB3CUhqU0ltQAvStQDyA&s" alt="Calzado 2">
+                <h3>Calzado 2</h3>
+                <p>Precio: 450.00 S/</p>
+                <p>Talla: 36-43</p>
+                <button onclick="comprar('Calzado 2')">Comprar</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIK9TNPz_gBZ_pEuyDgF1WJs7D6j-NAYzo0A&s" alt="Calzado 3">
+                <h3>Calzado 3</h3>
+                <p>Precio: 500.00 S/</p>
+                <p>Talla: 38-40</p>
+                <button onclick="comprar('Calzado 3')">Comprar</button>
+            </div>
+        </section>
+
+        <!-- Formulario de Registro -->
+        <section id="registro" class="auth-form">
+            <h2>Registro</h2>
+            <form id="registroForm">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <section id="login" class="auth-form">
+            <h2>Iniciar sesión</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Función para comprar un producto
+        function comprar(producto) {
+            alert("Por favor ingresa tus datos para completar la compra.");
+            // Redirigir a la página de detalles del producto
+            window.location.href = `producto.html?producto=${producto}`;
+        }
+
+        // Simular el envío de datos del formulario de registro
+        document.getElementById("registroForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Aquí normalmente enviarías los datos al backend para registro
+            alert("Registro exitoso. Ahora puedes iniciar sesión.");
+        });
+
+        // Simular el envío de datos del formulario de inicio de sesión
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Aquí normalmente enviarías los datos al backend para iniciar sesión
+            alert("Inicio de sesión exitoso.");
+        });
+    </script>
+</body>
+</html>
